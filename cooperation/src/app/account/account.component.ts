@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Account } from '../classes/account';
+
+// service
+import { AccountsService } from '../accounts.service';
 
 @Component({
   selector: 'app-account',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private accountsService: AccountsService) { }
+
+  accounts : Account[];
 
   ngOnInit() {
+    this.accountsService.getAccountMock().subscribe(
+      (data: Account) => this.accounts = data);
   }
 
 }
