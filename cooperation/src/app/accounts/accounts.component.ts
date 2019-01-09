@@ -11,8 +11,6 @@ export class AccountsComponent implements OnInit {
 
   constructor(private accountsService: AccountsService)
   {
-
-
   }
 
   accounts : Account[];
