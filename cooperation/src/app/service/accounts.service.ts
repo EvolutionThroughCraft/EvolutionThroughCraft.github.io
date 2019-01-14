@@ -14,4 +14,18 @@ export class AccountsService {
   {
     return this.httpService.get<Account[]>("http://www.mocky.io/v2/5c2696e930000060000bf65a");
   }
+
+  public getAccountById(id : number)
+  {
+    // mock
+  //  Account[] accounts;
+  //  this.accountsService.getAccounts().subscribe(
+  //    (data: Account[]) => accounts = data);
+
+  //  var account = accounts.find(function(element) { return element == id })
+
+  //  return account;
+  }
+
+
 }
